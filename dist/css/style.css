@@ -474,6 +474,31 @@
   }
 }
 
+.qingwei {
+  height: 100%;
+  padding-top: 40vh;
+  overflow: hidden;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(16, 24, 32, 0.9)), to(rgba(16, 24, 32, 0.3))), url("../img/fuck.jpg") right top;
+  background: linear-gradient(to right, rgba(16, 24, 32, 0.9), rgba(16, 24, 32, 0.3)), url("../img/fuck.jpg") right top;
+  background-size: cover;
+}
+
+.qingwei__name {
+  font-size: 5rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #fff;
+}
+
+.qingwei__name--last {
+  color: #f2aa4c;
+  font-weight: 700;
+}
+
 body {
   background: #101820;
   color: #fff;
