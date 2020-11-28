@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TYJ's rotating cube</title>
+  <style>
+    body {
+      width: 100%;
+      height: 100vh;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+    }
+
+    #cube {
+      width: 300px;
+      height: 300px;
+      text-align: center;
+      line-height: 300px;
+      -webkit-transform: rotateY(170deg) rotateX(10deg);
+              transform: rotateY(170deg) rotateX(10deg);
+      -webkit-transform-style: preserve-3d;
+              transform-style: preserve-3d;
+      -webkit-animation: spinspinboy 2s linear infinite;
+              animation: spinspinboy 2s linear infinite;
+    }
+
+    #cube div {
+      width: 300px;
+      height: 300px;
+      opacity: 0.5;
+      position: absolute;
+      font-size: 45px;
+      font-weight: bold;
+    }
+
+    #cube .flat1 {
+      background: red;
+      -webkit-transform: rotateY(90deg) translateX(-50%) rotateY(-90deg);
+              transform: rotateY(90deg) translateX(-50%) rotateY(-90deg);
+    }
+
+    #cube .flat2 {
+      background: green;
+      -webkit-transform: rotateY(90deg) translateX(50%) rotateY(90deg);
+              transform: rotateY(90deg) translateX(50%) rotateY(90deg);
+    }
+
+    #cube .flat3 {
+      background: blue;
+      -webkit-transform: translateX(-50%) rotateY(-90deg);
+              transform: translateX(-50%) rotateY(-90deg);
+    }
+
+    #cube .flat4 {
+      background: yellow;
+      -webkit-transform: translateX(50%) rotateY(90deg);
+              transform: translateX(50%) rotateY(90deg);
+    }
+
+    #cube .flat5 {
+      background: orange;
+      -webkit-transform: translateY(-50%) rotateX(-90deg);
+              transform: translateY(-50%) rotateX(-90deg);
+    }
+
+    #cube .flat6 {
+      background: purple;
+      -webkit-transform: translateY(50%) rotateX(-90deg);
+              transform: translateY(50%) rotateX(-90deg);
+    }
+
+    @-webkit-keyframes spinspinboy {
+      0% {
+        -webkit-transform: rotateY(0deg) rotateX(45deg);
+                transform: rotateY(0deg) rotateX(45deg);
+      }
+      25% {
+        -webkit-transform: rotateY(90deg) rotateX(45deg);
+                transform: rotateY(90deg) rotateX(45deg);
+      }
+      50% {
+        -webkit-transform: rotateY(180deg) rotateX(45deg);
+                transform: rotateY(180deg) rotateX(45deg);
+      }
+      75% {
+        -webkit-transform: rotateY(270deg) rotateX(45deg);
+                transform: rotateY(270deg) rotateX(45deg);
+      }
+      100% {
+        -webkit-transform: rotateY(360deg) rotateX(45deg);
+                transform: rotateY(360deg) rotateX(45deg);
+      }
+    }
+
+    @keyframes spinspinboy {
+      0% {
+        -webkit-transform: rotateY(0deg) rotateX(45deg);
+                transform: rotateY(0deg) rotateX(45deg);
+      }
+      25% {
+        -webkit-transform: rotateY(90deg) rotateX(45deg);
+                transform: rotateY(90deg) rotateX(45deg);
+      }
+      50% {
+        -webkit-transform: rotateY(180deg) rotateX(45deg);
+                transform: rotateY(180deg) rotateX(45deg);
+      }
+      75% {
+        -webkit-transform: rotateY(270deg) rotateX(45deg);
+                transform: rotateY(270deg) rotateX(45deg);
+      }
+      100% {
+        -webkit-transform: rotateY(360deg) rotateX(45deg);
+                transform: rotateY(360deg) rotateX(45deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="cube">
+    <div class="flat1">front</div>
+    <div class="flat2">back</div>
+    <div class="flat3">left</div>
+    <div class="flat4">right</div>
+    <div class="flat5">top</div>
+    <div class="flat6">bottom</div>
+  </div>
+</body>
+</html>
